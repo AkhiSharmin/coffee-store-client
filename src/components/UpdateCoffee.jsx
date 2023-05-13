@@ -7,7 +7,7 @@ const UpdateCoffee = () => {
   const { _id, name, quantity, supplier, taste, category, details, photo } =
     coffee;
 
-  const handelAddCoffee = (event) => {
+  const handelUpdateCoffee = (event) => {
     event.preventDefault();
 
     const form = event.target;
@@ -57,7 +57,7 @@ const UpdateCoffee = () => {
       <h3 className="text-3xl font-extrabold text-center mb-4">
         Update Coffee: {name}
       </h3>
-      <form onSubmit={handelAddCoffee}>
+      <form onSubmit={handelUpdateCoffee}>
         {/* form name and quantity row */}
         <div className="md:flex mb-8">
           <div className="form-control md:w-1/2">
@@ -68,6 +68,7 @@ const UpdateCoffee = () => {
               <input
                 type="text"
                 name="name"
+                defaultValue={name}
                 placeholder="Coffee Name"
                 className="input input-bordered w-full"
               />
@@ -81,6 +82,7 @@ const UpdateCoffee = () => {
               <input
                 type="text"
                 name="quantity"
+                defaultValue={quantity}
                 placeholder="Available Quantity"
                 className="input input-bordered w-full"
               />
@@ -97,6 +99,7 @@ const UpdateCoffee = () => {
               <input
                 type="text"
                 name="supplier"
+                defaultValue={supplier}
                 placeholder="Supplier"
                 className="input input-bordered w-full"
               />
@@ -110,6 +113,7 @@ const UpdateCoffee = () => {
               <input
                 type="text"
                 name="taste"
+                defaultValue={taste}
                 placeholder="Taste"
                 className="input input-bordered w-full"
               />
@@ -127,6 +131,7 @@ const UpdateCoffee = () => {
                 type="text"
                 name="category"
                 placeholder="Category"
+                defaultValue={category}
                 className="input input-bordered w-full"
               />
             </label>
@@ -139,6 +144,7 @@ const UpdateCoffee = () => {
               <input
                 type="text"
                 name="details"
+                defaultValue={details}
                 placeholder="Details"
                 className="input input-bordered w-full"
               />
@@ -155,6 +161,7 @@ const UpdateCoffee = () => {
               <input
                 type="text"
                 name="photo"
+                defaultValue={photo}
                 placeholder="Photo Url"
                 className="input input-bordered w-full"
               />
